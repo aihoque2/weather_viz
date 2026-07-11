@@ -1,7 +1,7 @@
 import logo from './weather_maps_logo.png';
 import './App.css';
 import ButtonMenu from './components/ButtonMenu';
-import ColorMap from './components/ColorMap';
+import CityColorMap from './components/CityColorMap';
 import TestHumidity from './components/TestComponent';
 
 import { useEffect, useState } from 'react';
@@ -65,7 +65,7 @@ function App() {
     graphic = <TestHumidity></TestHumidity>
   } 
   else{
-    graphic = <ColorMap mode={mode} onClick={mapHandler}/>;
+    graphic = <CityColorMap mode={mode} onClick={mapHandler}/>;
 
   }
 

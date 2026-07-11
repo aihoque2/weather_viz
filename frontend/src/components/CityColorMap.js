@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import USAMap from "react-usa-map";
 import USStateToolTip from "./USStateToolTip.js";
 import { useApolloClient, useLazyQuery } from "@apollo/client";
-import "./ColorMap.css"
+import "./CityColorMap.css"
 import us_state_to_abbrev from "../extras/NameToAbbv.js"
 import us_state_to_name from "../extras/StateToName.js"
 import cities_data from "../extras/Cities.js";
@@ -45,7 +45,7 @@ const interpolateColor = (ratio, r1, g1, b1, r2, g2, b2) => {
     return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 };
 
-const ColorMap = (props) => {
+const CityColorMap = (props) => {
     const mode = props.mode
     const client = useApolloClient();
     let full_name = get_full_name(mode)
@@ -241,4 +241,4 @@ const ColorMap = (props) => {
     );
 };
 
-export default ColorMap;
+export default CityColorMap;

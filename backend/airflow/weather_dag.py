@@ -28,4 +28,6 @@ with DAG(
         bash_command='cd ~/Projects/data-projects/weather_maps/backend && python3 pyspark_zip_upload.py',
     )
 
+    # city data uploads, then zip uploads
+
     run_city_upload >> run_zip_upload
