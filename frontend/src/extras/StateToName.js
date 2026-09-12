@@ -52,6 +52,6 @@ const initial_object = {
     "DC": "District of Columbia",
 };
 
-const us_state_to_name = new Map(Object.entries(initial_object));
+const us_abbrev_to_name = new Map(Object.entries(initial_object));
 
-export default us_state_to_name;
+export default us_abbrev_to_name;
